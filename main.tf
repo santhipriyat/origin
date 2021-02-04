@@ -6,6 +6,14 @@ provider "azurerm" {
   tenant_id       = "90c3f360-0a02-49e4-b70c-4ebb69378edf"
   features {}
 }
+terraform {
+  backend "azurerm" {
+    storage_account_name = "k8st"
+    container_name       = "container3"
+    key                  = "dev.terraform.tfstate"
+    access_key = "hvdqCgGitXMMcumfAAAjl6C4J6raPQbo/LcFdBwH/LuiMYpiQxx88xyduy9BRy0MwUmowTIFOqFs1Wl+pRJ02w=="
+  }
+}
 resource "azurerm_resource_group" "k8s" {
     name     = var.resource_group_name
     location = var.location

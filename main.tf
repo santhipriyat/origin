@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "slotDemo" {
-  name     = "slotDemo1"
+  name     = "exam1"
   location = "westus2"
 }
 
